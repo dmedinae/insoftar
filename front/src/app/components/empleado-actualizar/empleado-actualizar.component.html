@@ -1,0 +1,20 @@
+<br />
+<div class="row">
+  <div class="col">
+    <ng-container *ngIf="!showForm && showTable">
+      <app-data-table
+        (action)="action($event)"
+        [data]="users"
+        [names]="names"
+      ></app-data-table>
+    </ng-container>
+    <ng-container *ngIf="showForm">
+      <div class="row">
+        <div class="col">
+          <button mat-raised-button (click)="back()"><mat-icon>arrow_back</mat-icon></button>
+        </div>
+      </div>
+      <app-empleado-ingresar (action)="refresh()" [userUpdate]="user"></app-empleado-ingresar>
+    </ng-container>
+  </div>
+</div>

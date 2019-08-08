@@ -1,0 +1,26 @@
+#Back
+
+/back/node_modules
+/back/public/hot
+/back/public/storage
+/back/storage/*.key
+/back/vendor
+/back/.idea
+/back/.vagrant
+/back/Homestead.json
+/back/Homestead.yaml
+/back/npm-debug.log
+/back/yarn-error.log
+
+#---------------------------------------------------------------------------------------------------------------
+
+#Front
+
+# compiled output
+/front/dist
+/front/tmp
+/front/out-tsc
+
+# dependencies
+/front/node_modules
+

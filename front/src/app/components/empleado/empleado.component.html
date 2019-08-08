@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <mat-tab-group #tabGroup>
+        <!--
+        <mat-tab *ngFor="let action of allowedActions" [label]="action['accion']">
+          Prueba          
+        </mat-tab>
+        -->
+        <mat-tab label="Ingresar" style="overflow: hidden !important;">
+          <div class="col"><app-empleado-ingresar></app-empleado-ingresar></div>
+        </mat-tab>
+        <mat-tab label="Actualizar" style="overflow: hidden !important;">
+          <div class="col">
+            <ng-container *ngIf="tabGroup.selectedIndex == 1">
+              <app-empleado-actualizar></app-empleado-actualizar>
+            </ng-container>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+Migrations
+
+Solucionar error 1071 Specified key was too long;
+
+config/database.php
+
+array mysql change engine => null to engine => 'innoDB'

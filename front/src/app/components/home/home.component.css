@@ -1,0 +1,195 @@
+.background{
+    /*padding-top: 22vh;*/
+    background-image: url('../../../assets/img/LoginF.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+@media(max-height:700px){
+    .background{
+        overflow: auto !important;
+    }
+    .background::-webkit-scrollbar { 
+        display: none; 
+    }
+
+}
+
+@media(max-width:630px){
+    .background{
+        padding-top: 8vh !important;
+    }
+    .letters{
+        font-size: 3.4rem !important;
+    }
+    h1{
+        font-size:2rem;
+    }
+    h5{
+        font-size: 1.2rem !important;
+    }
+    .card-container{
+        margin-top: 6vh !important;
+    }
+}
+
+.rowPosition{
+    height: fit-content;
+    margin: auto;
+    /*position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;*/
+}
+
+.name{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*padding-left: 2rem;*/
+}
+h5{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+}
+.letters{
+    /*font-family: 'castIron';*/
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-size: 4rem;
+}
+  
+.ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+.ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+  
+.ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+.ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+:host /deep/ .mat-card-header-text {
+    color: white;
+    font-family: 'castIron';
+    margin: auto;
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 36px;
+}
+
+.card-container{
+    border-radius: 10px;
+    perspective: 1400px;
+    width: 80%;
+    height: 100%;  
+    max-height: 20rem;
+    max-width: 27rem;
+    min-height: 12rem;
+    min-width: 11rem;
+}
+
+.card{
+    transition: height 0.5s ease, width 0.5s ease, margin-top 0.5s ease, background-color 0.5s ease;
+    position: relative;
+    height: 90%;
+    width: 90%;
+    /*margin: auto;*/
+    border-radius: 10px;
+    border:none !important;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    background-color: transparent !important;
+}
+
+.card:hover{
+    transition: height 0.5s ease, width 0.5s ease, margin-top 0.5s ease;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.front:hover, .back:hover{
+    transition: background-color 0.5s ease;
+    background-color: rgba(211, 211, 211, 0.89);
+}
+
+.front, .back{
+    transition: background-color 0.5s ease;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background-image: url('../../../assets/img/Card_texture2.png') !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(22, 22, 37);
+}
+
+.front{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 1.5px;
+    font-size:40px; 
+}
+
+.back{
+    position: absolute;
+    
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+.btn-login{
+    margin:auto; 
+    color:black;
+    background-color: white;
+  
+}
+.btn-login:hover{
+    background-color:  rgba(255, 255, 255, 0.733);
+}
+
+.aditionalInfo{
+    color:grey;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.7rem;
+}
+
+

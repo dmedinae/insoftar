@@ -1,0 +1,61 @@
+<br />
+<form class="text-center" [formGroup]="userForm" #Form="ngForm">
+  <div class="row">
+    <div class="col-lg-6">
+      <mat-form-field>
+        <input matInput placeholder="Nombres" formControlName="nombres" />
+        <mat-error *ngIf="userForm.controls.nombres.invalid">{{
+          getErrorMessage(userForm.controls.nombres)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-6">
+      <mat-form-field>
+        <input matInput placeholder="Apellidos" formControlName="apellidos" />
+        <mat-error *ngIf="userForm.controls.apellidos.invalid">{{
+          getErrorMessage(userForm.controls.apellidos)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <mat-form-field>
+        <input matInput placeholder="Cédula" formControlName="cedula" />
+        <mat-error *ngIf="userForm.controls.cedula.invalid">{{
+          getErrorMessage(userForm.controls.cedula)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-6">
+      <mat-form-field>
+        <input matInput placeholder="Teléfono" formControlName="telefono" />
+        <mat-error *ngIf="userForm.controls.telefono.invalid">{{
+          getErrorMessage(userForm.controls.telefono)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <input matInput placeholder="Correo" formControlName="correo" />
+        <mat-error *ngIf="userForm.controls.correo.invalid">{{
+          getErrorMessage(userForm.controls.correo)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <button
+        mat-raised-button
+        (click)="createUser()"
+        [disabled]="!userForm.valid"
+      >
+        Enviar
+      </button>
+    </div>
+  </div>
+</form>
+<br />

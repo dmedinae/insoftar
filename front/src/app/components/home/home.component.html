@@ -1,0 +1,57 @@
+<div class="container-fluid background">
+  <div class="row" style="height: 20vh"></div>
+  <div class="row" style="height: 100%; width: 100%;">
+    <div class="col"></div>
+    <div class="col">
+      <div class="card-container">
+        <div class="card">
+          <div class="front"><h1>INICIAR SESIÓN</h1></div>
+          <div class="back">
+            <form
+              action=""
+              (click)="$event.stopPropagation()"
+              [formGroup]="loginForm"
+            >
+              <div class="row">
+                <div class="col-12" style="text-align: center">
+                  <mat-form-field style="width: 80%">
+                    <input id="usuario" matInput formControlName="usuario" />
+                    <mat-placeholder class="placeholder"
+                      >Usuario</mat-placeholder
+                    >
+                  </mat-form-field>
+                </div>
+                <div class="col-12" style="text-align: center">
+                  <mat-form-field style="width: 80%">
+                    <input
+                      id="password"
+                      matInput
+                      formControlName="password"
+                      type="password"
+                    />
+                    <mat-placeholder class="placeholder"
+                      >Contraseña</mat-placeholder
+                    >
+                  </mat-form-field>
+                </div>
+              </div>
+              <button
+                (click)="userLogin()"
+                [disabled]="!loginForm.valid"
+                class="btn-login"
+                mat-raised-button
+              >
+                Iniciar sesión
+              </button>
+              <br />
+              <small class="col-12 aditionalInfo"
+                >¿No puedes ingresar? - Contacta con tu administrador</small
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
